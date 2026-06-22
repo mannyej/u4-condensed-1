@@ -108,12 +108,13 @@ generateButton.addEventListener("click", function () {
   // [noun] the whole time."
 
   // Your code here (replace firstSentence with your full story):
-
+  let days = Number(2);
+  let minutes = days * 24 * 60
   firstSentence = `Deep inside the codebase lives a ${adjective} bug that's been
-   hiding for ${number} days.${name} grabs their debugger and
+   hiding for ${number} days.${name ? name : "jack"} grabs their debugger and
    ventures into ${place} to hunt it down, only to discover the
    bug can ${verb} and has been disguising itself as an innocent
-  ${noun} the whole time.`
+  ${noun} the whole time. It took ${name ? name : "jack"} ${minutes} minutes to solve the issue.`
 
 
   // **********************************************************
@@ -144,6 +145,10 @@ generateButton.addEventListener("click", function () {
 // 2. Add a click event listener
 // 3. Set each input's .value to ""
 // 4. Clear the story output too
+
+document.querySelector("#clear").addEventListener("click", function () {
+  document.querySelector("#story").innerHTML = ""
+})
 
 
 // STRETCH 3: Use Number() with the number input
