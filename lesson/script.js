@@ -26,7 +26,7 @@ let generateButton = document.querySelector("#generate");
 // ************************************************************
 // Now we tell the button: "When someone clicks you, run this code"
 
-generateButton.addEventListener("click", function() {
+generateButton.addEventListener("click", function () {
 
   // **********************************************************
   // WE DO TOGETHER - Part 3: Read the first few inputs
@@ -70,6 +70,15 @@ generateButton.addEventListener("click", function() {
 
   // Your code here:
 
+  let verb = document.querySelector("#verb").value;
+  let place = document.querySelector("#place").value;
+  let number = document.querySelector("#number").value;
+
+
+
+
+
+
 
 
   // **********************************************************
@@ -78,6 +87,10 @@ generateButton.addEventListener("click", function() {
   // Use console.log() to check your values, just like we did above
 
   // Your code here:
+
+  console.log("verb:", verb)
+  console.log("place:", place)
+  console.log("number:", number)
 
 
 
@@ -96,6 +109,11 @@ generateButton.addEventListener("click", function() {
 
   // Your code here (replace firstSentence with your full story):
 
+  firstSentence = `Deep inside the codebase lives a ${adjective} bug that's been
+   hiding for ${number} days.${name} grabs their debugger and
+   ventures into ${place} to hunt it down, only to discover the
+   bug can ${verb} and has been disguising itself as an innocent
+  ${noun} the whole time.`
 
 
   // **********************************************************
@@ -106,6 +124,7 @@ generateButton.addEventListener("click", function() {
 
   // Your code here:
 
+  document.querySelector("#story").innerHTML = firstSentence;
 
 });
 
